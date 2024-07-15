@@ -203,7 +203,6 @@ export default {
   },
   created() {
     this.routes = constantRoutes;
-    this.$store.dispatch("user/getInfo");
   },
   mounted() {
     var scrollTopLast = 0;
