@@ -65,7 +65,10 @@ module.exports = defineConfig({
     //   .plugin("webpack-bundle-analyzer")
     //   .use(require("webpack-bundle-analyzer").BundleAnalyzerPlugin);
 
-
+    config.externals({
+      'vue': 'Vue',
+      'element-ui': 'ELEMENT'
+    })
     // 使用代码分割，将每个路由组件分成一个单独的块
     config.optimization.splitChunks({
       // 指定要分割的代码块类型，all表示所有类型（同步和异步）
